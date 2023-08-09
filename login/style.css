@@ -1,0 +1,130 @@
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: #ffffff;
+    color: #000;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    backface-visibility: hidden; 
+    will-change: transform;
+    text-rendering: optimizeSpeed;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centrar el swiper horizontalmente */
+}
+
+/* Estilos para cada tarjeta (slide) */
+.swiper-slide {
+  background-color: #313131; /* Fondo de cada tarjeta */
+  border-radius: 8px; /* Bordes redondeados para las tarjetas */
+  overflow: hidden; /* Para ocultar cualquier contenido que se desborde */
+}
+
+.card {
+  padding: 20px;
+}
+
+.general{
+    width: 93%;
+    height: 100%;    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: .1px solid rgb(255, 255, 255);
+    animation: changeColorBorder infinite ease-in-out 3s;
+    -moz-animation: changeColorBorder infinite ease-in-out 3s; 
+    -webkit-animation: changeColorBorder infinite ease-in-out 3s;
+    border-radius: 8px;
+}
+
+.general h2{
+    animation: changeColor 1.5s ease-in infinite;
+    -moz-animation: changeColor  1.5s ease-in infinite; 
+    -webkit-animation: changeColor 1.5s ease-in infinite;
+}
+
+
+h2{
+    background: white;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 70px;
+    transition: .5s ease-in-out 0.5s;
+
+}
+
+.general :is(.allLogin, .allRegister) {
+  outline: none;
+  border: 1px solid white;
+  border-bottom: 1px solid black;
+  margin: 1px;
+}
+
+.general :is(.allLogin:focus, .allRegister:focus){
+  animation: changeColorBorder  1.5s ease-in infinite;
+}
+
+.send{
+  background: white;
+  border: 1px solid rgb(168, 166, 166);
+  cursor: pointer;
+}
+
+.send:hover{
+  color: black;
+  border: 1px solid black;
+  background: rgb(202, 202, 202);
+}
+
+h5{
+  color: white;
+}
+
+#errorLogin, #errorRegister{
+  color: white;
+}
+
+@keyframes changeColor{    
+    0%, 57.12%{
+        background: linear-gradient(50deg, #FF0000, #FF7F00, #FFFF00, #00FF00);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      14.28%,71.39%{
+        background: linear-gradient(50deg,  #FF7F00,#FF0000, #FFFF00, #00FF00);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      28.56%,85.67% {
+        background: linear-gradient(50deg, #FF7F00, #FFFF00, #FF0000, #00FF00);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      42.84%,100%{
+        background: linear-gradient(50deg, #FF7F00, #FFFF00, #00FF00, #FF0000);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+}
+
+@keyframes changeColorBorder{    
+    0%, 57.12%{
+      border-color:#FF0000;
+      }
+      14.28%,71.39%{
+        border-color: #FF7F00;
+      }
+      28.56%,85.67% {
+        border-color: #FFFF00;
+      }
+      42.84%,100%{
+        border-color: #00FF00;
+      }
+}

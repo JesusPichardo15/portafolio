@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card general" id="login">
+                    <h2>Iniciar Secion</h2>
+                    <input type="text" id="user-login" class="allLogin" placeholder="Usuario" required>
+                    <input type="password" id="password-login" class="allLogin" placeholder="Contraseña" required>
+                    <input type="button" id="send-button-login" class="send" value="entrar">
+                    <div id="errorLogin"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card general" id="register">
+                  <h2>Registrarte</h2>
+                  <input type="email" id="email-register" class="allRegister" placeholder="Correo electronico" required>
+                  <input type="text" id="user-register" class="allRegister" placeholder="Usuario" required>
+                  <input type="password" id="password-register" class="allRegister" placeholder= "Contraseña" required>
+                  <input type="password" id="confirm-password-register" class="allRegister" placeholder="Confirme contraseña" required>
+                  <div id="errorRegister"></div>
+                  <input type="button" id="send-button-register" class="send" value="enviar">
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="login.js" type="module"></script>
+    <script src="register.js" ></script>
+</body> 
+</html>
